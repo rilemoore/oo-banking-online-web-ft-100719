@@ -23,6 +23,7 @@ class Transfer
     
     if(@amount > @sender.balance || @status != "pending" || !valid?)
       "Transaction rejected. Please check your account balance."
+      puts "hello"
       @status = "rejected"
     else
       @sender.balance -= @amount
