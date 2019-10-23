@@ -22,7 +22,7 @@ class BankAccount
     if(@status == "open" && @balance > 0)
       true
     else
-      nil
+      false
     end
   end
   
