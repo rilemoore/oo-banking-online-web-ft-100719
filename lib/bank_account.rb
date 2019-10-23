@@ -22,7 +22,11 @@ class BankAccount
     if(@status == "open" && @balance > 0)
       true
     end
-    false
+    nil
+  end
+  
+  def close_account
+    @status = "closed"
   end
   
 end
