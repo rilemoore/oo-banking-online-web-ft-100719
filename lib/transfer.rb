@@ -12,6 +12,21 @@ class Transfer
   end
   
   def valid?
+    if(@sender.valid? && @receiver.valid?)
+      true
+    else
+      false
+    end
+  end
+  
+  def execute_transaction
+    
+    if(@transfer_amount > @sender.balance)
+      "fail"
+    else
+      @sender.balance -= @transfer_amount
+      @receiver.balance += @transfer_amount
+    end
     
   end
   
