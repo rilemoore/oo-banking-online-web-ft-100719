@@ -33,8 +33,8 @@ class Transfer
   
   def reverse_transfer
     if(@status != "pending")
-      @sender.balance += @transfer_amount
-      @receiver.balance -= @transfer_amount
+      @sender.balance += @amount
+      @receiver.balance -= @amount
       @status = "pending"
     end
   end
